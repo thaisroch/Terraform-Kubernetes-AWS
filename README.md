@@ -54,4 +54,4 @@ Installation [https://pre-commit.com/#install]
 
 Pre-commit hook terraform [https://github.com/antonbabenko/pre-commit-terraform]
 
-created file ```` .pre-commit-config````  and execute command ```` pre-commit install````  in bash.
+created file with hooks terraform_fmt and terraform_validate in ```` .pre-commit-config````  and execute command ```` pre-commit install````  in bash.
