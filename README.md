@@ -46,3 +46,12 @@ Check if the input is formatted. Exit status will be 0 if all input is properly 
 ````
 terraform fmt -recursive -check
 ```` 
+
+### Pre-commit
+Site office: [https://pre-commit.com/]
+
+Installation [https://pre-commit.com/#install]
+
+Pre-commit hook terraform [https://github.com/antonbabenko/pre-commit-terraform]
+
+created file ```` .pre-commit-config````  and execute command ```` pre-commit install````  in bash.
