@@ -7,6 +7,17 @@ Stating and download of plugins
 ```` 
 terraform init 
 ````
+````
+terrafotm plan
+````
+````
+terraform apply
+````
+
+````
+terraform apply -destroy
+````
+
 
 ## Documentation and descriptions
 
@@ -55,3 +66,45 @@ Installation [https://pre-commit.com/#install]
 Pre-commit hook terraform [https://github.com/antonbabenko/pre-commit-terraform]
 
 created file with hooks terraform_fmt and terraform_validate in ```` .pre-commit-config````  and execute command ```` pre-commit install````  in bash.
+
+-----------
+### Terraform Functions 
+
+Overview [https://developer.hashicorp.com/terraform/language/functions]
+
+
+Function cidrsubnet 
+[https://developer.hashicorp.com/terraform/language/functions/cidrsubnet]
+
+```` cidrsubnet(prefix, newbits, netnum)```` 
+
+#### Terraform console
+
+Starting console:
+````terraform console````
+
+###### Function cidrsubnet 
+
+```` cidrsubnet(10.0.0.0/16, 8, 1)````
+output:
+"10.0.1.0/24"
+```` cidrsubnet(10.0.0.0/16, 8, 2)````
+output:
+"10.0.2.0/24"
+```` cidrsubnet(10.0.0.0/16, 8, 3)````
+output:
+"10.0.3.0/24"
+```` cidrsubnet(10.0.0.0/16, 8, 4)````
+output:
+"10.0.4.0/24"
+
+###### Function replace
+```` replace("hello world", "world", "everybody")````
+output:
+"hello everbody"
+
+----
+#### Aws Subnets
+
+[https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet]
+
