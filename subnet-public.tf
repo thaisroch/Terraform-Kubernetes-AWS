@@ -29,6 +29,8 @@ resource "aws_subnet" "eks_subnet_public_1b" {
     }
   )
 }
+
+# Documentation terraform this resource https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route_table_association
 resource "aws_route_table_association" "eks_rtb_assoc_1a" {
   subnet_id      = aws_subnet.eks_subnet_public_1a.id
   route_table_id = aws_route_table.eks_route_table_public.id
