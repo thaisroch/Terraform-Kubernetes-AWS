@@ -1,3 +1,7 @@
+# https://registry.terraform.io/providers/hashicorp/tls/latest/docs/data-sources/certificate
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eks_cluster#argument-reference
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_openid_connect_provider
+
 data "tls_certificate" "eks_oidc_tls_certificate" {
   url = aws_eks_cluster.eks_cluster.identity[0].oidc[0].issuer
 }
