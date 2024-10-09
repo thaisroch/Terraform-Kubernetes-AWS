@@ -6,3 +6,6 @@ repos:
     arg:
       - --args=-recursive
   - id: terraform_validate
+  - id: terraform_docs
+    arg:
+      - --args=--output-file README.md
