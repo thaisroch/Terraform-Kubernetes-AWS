@@ -3,7 +3,7 @@ resource "aws_eks_node_group" "eks_mgn" {
   cluster_name    = var.eks_cluster_name
   node_group_name = "${var.project_name}-mgn"
   node_role_arn   = aws_iam_role.eks_mng_role.arn
-  instance_types  = ["t2.micro"]
+  instance_types  = ["t2.medium"]
   subnet_ids = [
     var.private_subnet_1a,
     var.private_subnet_1b
